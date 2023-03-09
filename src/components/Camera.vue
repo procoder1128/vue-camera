@@ -240,6 +240,7 @@ export default {
       }
       try {
         let allDevices = await navigator.mediaDevices.enumerateDevices();
+        console.log('=====================', allDevices);
         for (let mediaDevice of allDevices) {
           if (mediaDevice.kind === "videoinput") {
             let option = {};
